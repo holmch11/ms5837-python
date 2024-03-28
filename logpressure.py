@@ -1,10 +1,39 @@
+'''
+logpressure.py
+
+Intakes MS5837 Data output and streams to file
+
+Copyright (c) 2023
+Created by Christopher Holm
+holmch@oregonstate.edu
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Revision History
+#####################################################################################
+2023/01/04 CEH Initial Version
+
+
+####################################################################################
+'''
 #!/usr/bin/python
 import ms5837
 import time
 import datetime
 import csv
 
-sensor = ms5837.MS5837_30BA() # Default I2C bus is 1 (Raspberry Pi 3)
+sensor = ms5837.MS5837_30BA() # Default I2C bus is 1 (Raspberry Pi 4)
 #sensor = ms5837.MS5837_30BA(0) # Specify I2C bus
 #sensor = ms5837.MS5837_02BA()
 #sensor = ms5837.MS5837_02BA(0)
